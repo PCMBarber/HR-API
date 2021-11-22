@@ -1,7 +1,5 @@
 package com.qa.hr.entities;
 
-import javax.persistence.Column;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +20,7 @@ public class EmployeeEmailDTO {
 	private String content;
 	
 	public static EmployeeEmailDTO mapToDTO(Employee emp, Email mail) {
-		return new EmployeeEmailDTO(emp.getFirstName(),emp.getLastName());
+		return new EmployeeEmailDTO(emp.getFirstName(), emp.getLastName(), 
+				emp.getEmail(), mail.getSubject(), mail.getContent());
 	}
 }

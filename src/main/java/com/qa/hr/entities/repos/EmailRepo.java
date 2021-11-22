@@ -7,5 +7,5 @@ import com.qa.hr.entities.Email;
 
 @Repository
 public interface EmailRepo extends JpaRepository<Email, Long> {
-
+	
 }
